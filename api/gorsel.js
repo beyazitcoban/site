@@ -16,8 +16,8 @@ export default function handler(req, res) {
   const isMobile = /Mobile|Android|iPhone|iPad/i.test(ua);
 
   const redirectUrl = isMobile
-    ? 'https://i.imgur.com/fHyEMsl.jpg'     // Test için Imgur
-    : 'https://i.imgur.com/2WZtOD6.jpg';    // Test için Imgur
+    ? 'https://i.imgur.com/fHyEMsl.jpeg'     // Test için Imgur
+    : 'https://i.imgur.com/2WZtOD6.jpeg';    // Test için Imgur
 
   res.redirect(302, redirectUrl);
 }
