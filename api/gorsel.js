@@ -1,4 +1,4 @@
-export default function handler(req, res) {
+/*export default function handler(req, res) {
   const ua = req.headers['user-agent'] || '';
   const isMobile = /Mobile|Android|iPhone|iPad/i.test(ua);
 
@@ -8,4 +8,16 @@ export default function handler(req, res) {
 
   res.writeHead(302, { Location: redirectUrl });
   res.end();
+}
+*/
+
+export default function handler(req, res) {
+  const ua = req.headers['user-agent'] || '';
+  const isMobile = /Mobile|Android|iPhone|iPad/i.test(ua);
+
+  const redirectUrl = isMobile
+    ? 'https://i.imgur.com/fHyEMsl.jpg'     // Test için Imgur
+    : 'https://i.imgur.com/2WZtOD6.jpg';    // Test için Imgur
+
+  res.redirect(302, redirectUrl);
 }
